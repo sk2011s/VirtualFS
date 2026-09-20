@@ -1,28 +1,3 @@
-"""
-vfs_ftp.py — Lightweight FTP server backed by the in-memory VFS.
-
-Usage from the UI:
-
-    from vfs_ftp import VFSFTPServer
-
-    self.ftp = VFSFTPServer(
-        root=self.root_node,           # fs.Root instance
-        on_change=self._render,        # called after any write op
-        host="127.0.0.1",
-        port=2121,
-        user="user",
-        password="pass",
-    )
-    self.ftp.start()      # runs in a background thread
-    ...
-    self.ftp.stop()       # when closing the app
-
-Only the minimum FTP commands needed for browsing / transfer are
-implemented (USER, PASS, PWD, CWD, CDUP, LIST, NLST, RETR, STOR,
-DELE, MKD, RMD, SIZE, TYPE, PASV, PORT, QUIT, FEAT, SYST, NOOP).
-This is enough for FileZilla, Windows Explorer, and the `ftp` CLI.
-"""
-
 import socket
 import threading
 import time
