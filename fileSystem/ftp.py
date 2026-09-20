@@ -553,5 +553,3 @@ class _Session:
             self.send("501 Bad PORT syntax")
         return True
 
-
-# ---------- convenience for the UI ----------
